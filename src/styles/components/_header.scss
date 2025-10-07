@@ -1,0 +1,54 @@
+.cr-header {
+  margin-bottom: $spacer * 0.5;
+  // border-bottom: $border-width solid $border-color;
+  background: linear-gradient(to bottom left, #1ed2fc, #015fdf);
+
+  &__nav-right {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-left: auto;
+  }
+
+  // &__notification-popover {
+  //   &.popover {
+  //     width: 320px;
+  //     max-width: 320px;
+  //     max-height: 100vh;
+  //     overflow-y: scroll;
+  //     cursor: pointer;
+  //   }
+  // }
+}
+
+.bg-header-logo {
+  background: linear-gradient(to bottom left, #1ed2fc, #015fdf);
+}
+
+.bg-login {
+  background-image: url('../assets/img/logo/bg_non2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: blur(1px);
+  //filter: saturate(1450%);
+  opacity: 0.6;
+}
+
+.bg-btn-login {
+  background-color: #015fdf;
+  border-radius: 15px;
+  color: #ffffff;
+  height: 35px;
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //font-weight: 600;
+  cursor: pointer;
+  border: 0;
+  width: 100%;
+}
+
+.bg-btn-login:hover {
+  background-color: #015fdf80;
+}

@@ -1,0 +1,31 @@
+import Page from 'components/Page';
+import { Link } from 'react-router-dom';
+import React from 'react';
+import ProjectList from '../components/Progress1/Progress1List';
+import { Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
+import { Fab } from '@material-ui/core';
+import Icon from '@material-ui/core/Icon';
+import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
+
+function Progress1({ project_id }) {
+  return (
+    <Page
+      title={'รายงานผลปฏิบัติงานโครงการ'}
+      breadcrumbs={[
+        { name: 'ข้อมูลโครงการ', active: false, link: '/project1' },
+        { name: 'รายงานผลปฏิบัติงานโครงการ', active: true },
+      ]}
+      className="Project1-2"
+    >
+      <ProjectList project_id={project_id} />
+    </Page>
+  );
+}
+
+export default class Project extends React.Component {
+  render() {
+    let project_id = this.props.match.params.id;
+    return <Progress1 project_id={project_id} />;
+  }
+}

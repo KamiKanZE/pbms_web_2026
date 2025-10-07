@@ -1,0 +1,12 @@
+export { default as Content } from './Content';
+export { default as EmptyLayout } from './EmptyLayout';
+export { default as Footer } from './Footer';
+export { default as Header } from './Header';
+export { default as LayoutRoute } from './LayoutRoute';
+export { default as MainLayout } from './MainLayout';
+// export { default as Sidebar } from './Sidebar';
+// export { default as Sidebar2 } from './Sidebar2';
+// export { default as Sidebar3 } from './Sidebar3';
+// export { default as Sidebar4 } from './Sidebar4';
+// export { default as Sidebar5 } from './Sidebar5';
+// export { default as Sidebar6 } from './Sidebar6';

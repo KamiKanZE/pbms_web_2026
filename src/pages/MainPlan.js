@@ -1,0 +1,156 @@
+import Page from 'components/Page';
+import React from 'react';
+import {
+  Card,
+  CardBody,
+  CardHeader,
+  Col,
+  Row,
+  Table,
+  Progress,
+  InputGroup,
+  InputGroupAddon,
+  FormGroup,
+  Input,
+  Button,
+  UncontrolledButtonDropdown,
+  DropdownToggle,
+  DropdownItem,
+  ButtonGroup,
+  DropdownMenu,
+  keyword,
+} from 'reactstrap';
+import MainPlanList from 'components/Plan/MainPlanList';
+
+function MainPlan1({page}) {
+  return (
+    <Page
+      title="ข้อมูลกิจกรรมหลัก"
+      breadcrumbs={[{ name: 'ข้อมูลกิจกรรมหลัก', active: true }]}
+      className="MainPlan"
+    >
+      <Row>
+        <Col>
+          <MainPlanList page={page} />
+        </Col>
+      </Row>
+    </Page>
+  );
+};
+export default class MainPlan extends React.Component {
+  render() {
+    let page = this.props.match.params.id;
+    return <MainPlan1 page={page} />;
+  }
+}
+
+// export default MainPlan;
+// import React from 'react';
+// import FormAdd from 'components/DataPlan/Add';
+// import List from 'components/DataPlan/List';
+// import Page from 'components/Page';
+// import {
+//   Col,
+//   Row,
+//   Card,
+//   CardBody,
+//   CardHeader,
+//   Table,
+//   Modal,
+//   ModalBody,
+//   ModalFooter,
+//   ModalHeader,
+// } from 'reactstrap';
+// import { FormGroup, Fab, Button } from '@material-ui/core';
+// import Icon from '@material-ui/core/Icon';
+// import Tooltip from '@material-ui/core/Tooltip';
+
+// class Plan1 extends React.Component {
+//   constructor(props, context) {
+//     super(props, context);
+//     this.state = {
+//       refreshing: false,
+//       modal: false,
+//     };
+//   }
+//   toggle = modalType => () => {
+//     if (!modalType) {
+//       // this.handleReset();
+//       return this.setState({
+//         modal: !this.state.modal,
+//       });
+//     }
+//     this.setState({
+//       [`modal_${modalType}`]: !this.state[`modal_${modalType}`],
+//     });
+//   };
+//   // handleReset = () => {
+//   //   this.setState({
+//   //     plan_id: '',
+//   //     plan_name: '',
+//   //   });
+//   // };
+
+//   render() {
+//     return (
+//       <Page
+//         title="ข้อมูลแผนงาน"
+//         breadcrumbs={[{ name: 'ข้อมูลแผนงาน', active: true }]}
+//         className="Plan1"
+//       >
+//         {/* <Modal isOpen={this.state.modal} className={this.props.className}>
+//           <ModalHeader>เพิ่มข้อมูลแผนงาน</ModalHeader>
+//           <ModalBody />
+//         </Modal> */}
+//         <Row>
+//           <Col>
+//             <Card className="mb-12">
+//               <Col style={{ textAlign: 'right' }}>
+//                 <Tooltip title="Add">
+//                   <Fab
+//                     className="btn_not_focus"
+//                     onClick={this.toggle()}
+//                     color="primary"
+//                   >
+//                     <Icon>add</Icon>
+//                   </Fab>
+//                 </Tooltip>
+//               </Col>
+//               <CardBody>
+//                 <Row>
+//                   <Col xl={8} lg={8} md={8} />
+//                   <Col xl={12} lg={12} md={12}>
+//                     <Table responsive bordered striped hover>
+//                       <thead>
+//                         <tr>
+//                           {/* <th>No.</th> */}
+//                           <th>BudgetSourceId</th>
+//                           <th>MainPlanId</th>
+//                           <th>MainPlanName</th>
+//                           <th />
+//                         </tr>
+//                       </thead>
+//                       <List />
+//                     </Table>
+//                   </Col>
+//                 </Row>
+//               </CardBody>
+//             </Card>
+//           </Col>
+//         </Row>
+//         <Modal
+//           isOpen={this.state.modal}
+//           toggle={this.toggle()}
+//           className={this.props.className}
+//         >
+//           <ModalHeader toggle={this.toggle()}>เพิ่มข้อมูลแผนงาน</ModalHeader>
+//           <ModalBody>
+//             <FormAdd {...this.state} />
+//           </ModalBody>
+//         </Modal>
+//       </Page>
+//     );
+//   }
+// }
+
+// export default Plan1;
